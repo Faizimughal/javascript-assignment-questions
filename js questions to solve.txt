@@ -31,9 +31,9 @@ console.log(capitalText);
 
 1.Find the sum of all numbers in an array.         ✔
 
-2.Find the largest and smallest number in an array.   
+2.Find the largest and smallest number in an array. ✔  
 
-3.Reverse an array without using .reverse().
+3.Reverse an array without using .reverse().   
 
 4.Count how many times a specific number appears in an array.
 
@@ -101,3 +101,106 @@ Pehle for loop se try karo
 
 Phir map, filter, reduce, forEach se solve karne ki practice karo
 
+
+
+
+1.shift,unshift
+2.push,pop
+3.sort,length,reduce,split,slice,concat,substr,every,some,match,matchAll,indexof,find,filter,findlast,forEach,join,delete,copywithin,
+
+
+let a= new Map[name:"faizan",age:24]
+a.keys(); result= name,age;
+a.values();  result=faizan,24;
+
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let reverseArr=numbers.reverse();
+console.log(reverseArr);  //[28,21,15,12,8,6,3]
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let sortArr=numbers.sort();
+console.log(sortArr)    // [3,6,8,12,15,21,28]
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let fillArr=numbers.fill(0);
+console.log(fillArr);  //[0,0,0,0,0,0,0];
+
+let a= new Map[name:"faizan",age:24]
+let values= from(a as value)=>{console.log(a)};
+//faizan,24 
+
+let numbers = [3, 6, 8, 12, 15, 21, 28]; after shift();
+result=6, 8, 12, 15, 21, 28
+
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+numbers.copywithin(1,5);
+result= 3,15,8,12,15,21,28
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let b= numbers.some((x)=>x==3);
+console.log(b);       //true
+
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let b=numbers.every((x)=>x>10);
+console.log(b);      //false
+
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let value= numbers.splice(4,2,"new");
+console.log(value)      //[15,21]
+console.log(numbers)    // [3,6,8,12,new,28]
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let value= numbers.splice(4,2,"new","khurram");
+console.log(value)      //[15,21]
+console.log(numbers)    //[3,6,8,12,new,khurram,28]
+
+let numbers = [3, 6,[ 8, 12] 15, [23], 28];
+let flatArr=numbers.flat();
+console.log(flatArr);  //   [3, 6, 8, 12 15, 23, 28]
+
+               0  1  2   3   4   5   6
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let subStr=numbers.slice(1,5);
+console.log(subStr);     // [6,8,12,15] 
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+numbers.findIndex(num=>num==12);
+result //3
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let b = numbers.indexOf(12)  //result=3
+
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let num = numbers.find((x)=>x>12);
+console.log(num)    //15   
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let num = numbers.filter((x)=>x>12);
+console.log(num)    //15,21,28
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let b = numbers.includes(14);
+console.log(b)         //result = false
+
+person{
+    name:"faizan",
+    age:24,
+    country:"Paksitan"
+}
+console.log(Object.entries());
+
+output
+ [
+  ["name", "faizan"],
+  ["age", 24],
+  ["country", "Pakistan"]
+]
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+console.log(Array.isArray(numbers));
+//true

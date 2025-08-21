@@ -182,7 +182,11 @@
 //     document.write("Invalid day number");
 // }
 
+// 2.Find the largest and smallest number in an array.
 
-
-
-
+// let numbers = [3, 6, 8, 12, 15, 21, 28];
+// let largestNum, smallestNum;
+// largestNum = Math.max(...numbers);
+// smallestNum = Math.min(...numbers);
+// console.log("Largest Number: " + largestNum);
+// console.log("Smallest Number: " + smallestNum);
