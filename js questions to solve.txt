@@ -1,0 +1,103 @@
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+👉 isme se sirf even numbers nikal kar ek naye array me save karo.
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+evenArray=[];
+numbers.forEach((num)=>{
+if(num%2==0){
+evenArray.push(num);
+console.log(evenArray)
+}
+})
+
+
+let nums = [5, 10, 15, 20, 25];
+👉 iska sum nikalna hai using reduce.
+
+let sum=nums.reduce((acc,value)=>acc+value,0);
+console.log(sum);
+
+let fruits = ["apple", "banana", "mango", "grapes"];
+👉 har fruit ke naam ka pehla letter capital karo.
+
+let capitalText=[]
+fruits.forEach((fruit)=>{
+capitalText.push(fruit.charAt(0).toUpperCase()+fruit.slice(1))
+})
+console.log(capitalText);
+
+
+🔹Easy Level
+
+1.Find the sum of all numbers in an array.         ✔
+
+2.Find the largest and smallest number in an array.   
+
+3.Reverse an array without using .reverse().
+
+4.Count how many times a specific number appears in an array.
+
+5.Remove duplicates from an array.
+
+6.Check if an array is palindrome (e.g. [1,2,3,2,1]).
+
+7.Merge two arrays and remove duplicates.
+
+8.Find the second largest number in an array.
+
+9.Rotate an array by 1 position (e.g. [1,2,3,4] → [4,1,2,3]).
+
+10.Count even and odd numbers in an array.
+
+🔹 Medium Level
+
+1.Find the frequency of each element in an array.
+
+2.Flatten a nested array (e.g. [1,[2,3],[4,[5]]] → [1,2,3,4,5]).
+
+3.Find the missing number in an array (e.g. [1,2,3,5] → 4).
+
+4.Find the intersection of two arrays (common elements).
+
+5.Find the union of two arrays.
+
+6.Check if two arrays are equal (same elements, any order).
+
+7.Move all zeros to the end of an array (e.g. [0,1,0,3,12] → [1,3,12,0,0]).
+
+8.Find the longest increasing subarray.
+
+9.Find the pairs in an array whose sum is equal to a target.
+
+10.Check if array contains any duplicates.
+
+🔹 Hard Level
+
+1.Find the majority element (appears more than n/2 times).
+
+2.Find the maximum product subarray.
+
+3.Find the subarray with the largest sum (Kadane’s Algorithm).
+
+4.Rotate an array by k positions.
+
+5.Find all triplets with sum = 0 (3Sum problem).
+
+6.Find the first missing positive number.
+
+7.Find the minimum difference between any two elements.
+
+8.Given a sorted array, remove duplicates in-place.
+
+9.Find the peak element (greater than neighbors).
+
+10.Find the longest consecutive sequence in an array.
+
+⚡ Suggestion:
+
+Easy se start karo → phir medium → phir hard
+
+Pehle for loop se try karo
+
+Phir map, filter, reduce, forEach se solve karne ki practice karo
+
