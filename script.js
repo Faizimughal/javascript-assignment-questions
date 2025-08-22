@@ -190,3 +190,69 @@
 // smallestNum = Math.min(...numbers);
 // console.log("Largest Number: " + largestNum);
 // console.log("Smallest Number: " + smallestNum);
+
+// 3.Reverse an array without using .reverse().
+
+// let numbers = [3, 6, 8, 12, 15, 21, 28];
+// let reverseStr = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   let num = numbers[i];
+//   reverseStr.unshift(num);
+// }
+// console.log(reverseStr.toString());
+
+// 4.Count how many times a specific number appears in an array.
+// let numbers = [12, 10, 13, 10, 14, 14, 14, 15, 2, 12];
+// let result = {};
+
+// numbers.forEach((num) => {
+//   if (result[num]) {
+//     result[num]++; // agar number pehle se hai to count badhao
+//   } else {
+//     result[num] = 1; // pehli dafa aaye to 1 set karo
+//   }
+// });
+
+// console.log(result);
+
+// 5.Remove duplicates from an array.
+// let numbers = [12, 10, 13, 10, 14, 14, 14, 15, 2, 12];
+// let uniqueArray = [...new Set(numbers)];
+// console.log(uniqueArray);
+
+// 6.Check if an array is palindrome (e.g. [1,2,3,2,1]).
+// let arr = [1, 2, 3, 2, 1];
+// let reversedArr = [...arr].reverse();
+// if (JSON.stringify(arr) === JSON.stringify(reversedArr)) {
+//   console.log("It is a palindrome");
+// } else {
+//   console.log("It is not a palindrome");
+// }
+
+// 7.Merge two arrays and remove duplicates.
+//method 1
+// let numbers = [10, 12, 13, 14, 15, 16];
+// let newNumbers = [10, 12, 13, 13, 14, 18, 19];
+// let mergeArr = numbers.concat(newNumbers);
+// let uniqueArr = [...new Set(mergeArr)];
+// console.log(uniqueArr);
+
+//method2
+// let numbers = [10, 12, 13, 14, 15, 16];
+// let newNumbers = [10, 12, 13, 13, 14, 18, 19];
+// let uniqueArr = [...new Set([...numbers, ...newNumbers])];
+// console.log(uniqueArr);
+
+// 8.Find the second largest number in an array.
+
+// let numbers = [10, 12, 13, 14, 15, 16];
+// let largestNum = Math.max(...numbers);
+// let secondLargestNum = Math.max(...numbers.filter((num) => num !== largestNum));
+// console.log(secondLargestNum);
+
+// 9.Rotate an array by 1 position (e.g. [1,2,3,4] → [4,1,2,3]).
+
+// let numbers = [10, 12, 13, 14, 15, 16];
+// let shiftedNum = numbers.pop();
+// numbers.unshift(shiftedNum);
+// console.log(numbers);

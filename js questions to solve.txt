@@ -33,17 +33,17 @@ console.log(capitalText);
 
 2.Find the largest and smallest number in an array. ✔  
 
-3.Reverse an array without using .reverse().   
+3.Reverse an array without using .reverse().   ✔
 
-4.Count how many times a specific number appears in an array.
+4.Count how many times a specific number appears in an array.  ✔
 
-5.Remove duplicates from an array.
+5.Remove duplicates from an array.    ✔
 
-6.Check if an array is palindrome (e.g. [1,2,3,2,1]).
+6.Check if an array is palindrome (e.g. [1,2,3,2,1]). ✔
 
-7.Merge two arrays and remove duplicates.
+7.Merge two arrays and remove duplicates.  ✔
 
-8.Find the second largest number in an array.
+8.Find the second largest number in an array.   ✔
 
 9.Rotate an array by 1 position (e.g. [1,2,3,4] → [4,1,2,3]).
 
@@ -204,3 +204,57 @@ output
 let numbers = [3, 6, 8, 12, 15, 21, 28];
 console.log(Array.isArray(numbers));
 //true
+
+let numbers = [3, 6, 8, 12, 15, 21, 28];
+let reverseStr=[];
+for(let i=0;i<numbers.length;i++){
+let num = numbers[i];
+reverseStr.unshift(num);
+  }
+  console.log(reverseStr);
+
+  console.log()     //12:2,10:2,13:1,14:3,15:1,2:1
+
+
+  let numbers = [12, 10, 13, 10, 14, 14, 14, 15, 2, 12];
+  let result = {};
+
+numbers.forEach(num => {
+  if (result[num]) {
+    result[num]++;  // agar number pehle se hai to count badhao
+  } else {
+    result[num] = 1; // pehli dafa aaye to 1 set karo
+  }
+});
+
+console.log(result);
+
+
+
+  let numbers = [12, 10, 13, 10, 14, 14, 14, 15, 2, 12];
+let newArray= new Set(...numbers);
+console.log(newArray);
+
+
+6.Check if an array is palindrome (e.g. [1,2,3,2,1]).
+let numbers=[1,2,3,2,1];
+let newArr=numbers.split("").reverse().join("");
+if(newArr==numbers){
+    console.log("this is palindrome array");
+}else{
+    console.log("this is not a palindrome array");
+}
+
+
+let numbers = [10,12,13,14,15,16];
+let newNumbers = [10,12,13,13,,14,18,19];
+let mergeArr = numbers.concat(newNumbers);
+let uniqueArr= [...new Set(mergeArr)];
+console.log(uniqueArr);
+
+8.Find the second largest number in an array.
+
+let numbers = [10,12,13,14,15,16];
+let largestNum = Math.max(...numbers);
+let secondLargestNum = Math.max(...numbers.filter(num => num !== largestNum));
+console.log(secondLargestNum);
