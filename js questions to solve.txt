@@ -67,7 +67,7 @@ console.log(capitalText);
 
 8.Find the longest increasing subarray.   ✔
 
-9.Find the pairs in an array whose sum is equal to a target.  
+9.Find the pairs in an array whose sum is equal to a target.   ✔
 
 10.Check if array contains any duplicates.
 
