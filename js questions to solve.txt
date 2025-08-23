@@ -67,7 +67,7 @@ console.log(capitalText);
 
 8.Find the longest increasing subarray.   ✔
 
-9.Find the pairs in an array whose sum is equal to a target.   ✔
+9.Find the pairs in an array whose sum is equal to a target.  
 
 10.Check if array contains any duplicates.
 
@@ -308,12 +308,17 @@ console.log("both are same")
 
 9.Find the pairs in an array whose sum is equal to a target.  
 let arr=[1,2,3,4,5,6,7];
-let target=7;
-let seen=new Set();
-for(let num of arr){
-  let compliment = target-num;
-  if(seen.has(compliment)){
-    console.log("pair is found")
+let target=10;
+let found=false;
+let seen = new Set();
+arr.for(let num of arr){
+  let complement=target-num;
+  if(seen.has(complement)){
+    console.log(`pair is found:${num},${complement}`);
+    found=true;
   }
-  seen.add(compliment);
+  seen.add(num)
+}
+if(!found){
+  console.log(`pair is not found`);
 }
