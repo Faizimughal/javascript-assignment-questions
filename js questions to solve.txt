@@ -45,29 +45,29 @@ console.log(capitalText);
 
 8.Find the second largest number in an array.   ✔
 
-9.Rotate an array by 1 position (e.g. [1,2,3,4] → [4,1,2,3]).
+9.Rotate an array by 1 position (e.g. [1,2,3,4] → [4,1,2,3]).  ✔
 
-10.Count even and odd numbers in an array.
+10.Count even and odd numbers in an array.   ✔
 
 🔹 Medium Level
 
-1.Find the frequency of each element in an array.
+1.Find the frequency of each element in an array.     ✔
 
-2.Flatten a nested array (e.g. [1,[2,3],[4,[5]]] → [1,2,3,4,5]).
+2.Flatten a nested array (e.g. [1,[2,3],[4,[5]]] → [1,2,3,4,5]). ✔
 
-3.Find the missing number in an array (e.g. [1,2,3,5] → 4).
+3.Find the missing number in an array (e.g. [1,2,3,5] → 4).   ✔
 
-4.Find the intersection of two arrays (common elements).
+4.Find the intersection of two arrays (common elements).   ✔
 
-5.Find the union of two arrays.
+5.Find the union of two arrays.   ✔
 
-6.Check if two arrays are equal (same elements, any order).
+6.Check if two arrays are equal (same elements, any order).  ✔
 
-7.Move all zeros to the end of an array (e.g. [0,1,0,3,12] → [1,3,12,0,0]).
+7.Move all zeros to the end of an array (e.g. [0,1,0,3,12] → [1,3,12,0,0]).  ✔
 
-8.Find the longest increasing subarray.
+8.Find the longest increasing subarray.   ✔
 
-9.Find the pairs in an array whose sum is equal to a target.
+9.Find the pairs in an array whose sum is equal to a target.  
 
 10.Check if array contains any duplicates.
 
@@ -258,3 +258,62 @@ let numbers = [10,12,13,14,15,16];
 let largestNum = Math.max(...numbers);
 let secondLargestNum = Math.max(...numbers.filter(num => num !== largestNum));
 console.log(secondLargestNum);
+
+
+10.Count even and odd numbers in an array.
+
+let numbers =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+let evenNumbers=[];
+let oddNumbers=[];
+numbers.forEach((num)=>{
+  if(num%2==0)
+  evenNumbers.unshift(num);
+  else
+  oddNumbers.unshift(num);
+})
+console.log("even numbers in an array:",evenNumbers.length,"oddNumbers in an array:",oddNumbers.length)
+
+
+2.Flatten a nested array (e.g. [1,[2,3],[4,[5]]] → [1,2,3,4,5]).
+
+let arr=[1,[2,3],[4,[5]]];
+let flattenArr=arr.flat();
+console.log(flattenArr);
+
+
+
+3.Find the missing number in an array (e.g. [1,2,3,5] → 4). 
+
+let numbers = [1,2,3,4,5,8,9]
+let b = numbers.forEach((num)=>{
+  let missingNum=num+1;
+  if(numbers has missingNum)
+  console.log("no any missing Number")
+  else 
+  console.log(missingNum)
+})
+
+
+4.Find the intersection of two arrays (common elements).
+
+let Arr1=["apple","mango","banana","pineapple","orange","grapes"];
+let Arr2=["apple","mango","banana","orange","melon","watermelon"];
+console.log(commonFruits);
+
+let Arr1=[1,2,3,4,5];
+let Arr2=[5,4,2,1,3];
+if(Arr1.sort()===Arr2.sort())
+console.log("both are same")
+
+
+9.Find the pairs in an array whose sum is equal to a target.  
+let arr=[1,2,3,4,5,6,7];
+let target=7;
+let seen=new Set();
+for(let num of arr){
+  let compliment = target-num;
+  if(seen.has(compliment)){
+    console.log("pair is found")
+  }
+  seen.add(compliment);
+}

@@ -256,3 +256,120 @@
 // let shiftedNum = numbers.pop();
 // numbers.unshift(shiftedNum);
 // console.log(numbers);
+
+// 10.Count even and odd numbers in an array.
+
+// let numbers = [
+//   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+// ];
+// let evenNumbers = [];
+// let oddNumbers = [];
+// numbers.forEach((num) => {
+//   if (num % 2 == 0) evenNumbers.push(num);
+//   else oddNumbers.push(num);
+// });
+// console.log(
+//   "even numbers in an array:",
+//   evenNumbers.length,
+//   "oddNumbers in an array:",
+//   oddNumbers.length
+// );
+// console.log(evenNumbers);
+// console.log(oddNumbers);
+
+// 2.Flatten a nested array (e.g. [1,[2,3],[4,[5]]] → [1,2,3,4,5]).
+
+// let arr = [1, [2, 3], [4, [5]]];
+// let flattenArr = arr.flat(Infinity);
+// console.log(flattenArr);
+
+// 3.Find the missing number in an array (e.g. [1,2,3,5] → 4).
+
+// let numbers = [1, 2, 3, 4, 5, 8, 9, 10, 11, 20];
+// let min = Math.min(...numbers);
+// let max = Math.max(...numbers);
+// for (let i = min; i <= max; i++) {
+//   if (!numbers.includes(i)) {
+//     let missingNumbers = [];
+//     missingNumbers.push(i);
+//     console.log("Missing number is: " + missingNumbers);
+//   }
+// }
+
+// 4.Find the intersection of two arrays (common elements).
+
+// let Arr1 = ["apple", "mango", "banana", "pineapple", "orange", "grapes"];
+// let Arr2 = ["apple", "mango", "banana", "orange", "melon", "watermelon"];
+// let fruits = Arr1.filter((fruit) => Arr2.includes(fruit));
+// console.log(fruits);
+
+// let Arr1 = ["apple", "mango", "banana", "pineapple", "orange", "grapes"];
+// let Arr2 = ["apple", "mango", "banana", "orange", "melon", "watermelon"];
+
+// let set2 = new Set(Arr2); // {"apple","mango","banana","orange","melon","watermelon"}
+
+// let fruits = Arr1.filter((fruit) => set2.has(fruit));
+// console.log(fruits);
+
+// 5.Find the union of two arrays.
+
+// let Arr1 = ["apple", "mango", "banana", "pineapple", "orange", "grapes"];
+// let Arr2 = ["apple", "mango", "banana", "orange", "melon", "watermelon"];
+// let unionFruits = [...new Set([...Arr1, ...Arr2])];
+// console.log(unionFruits);
+
+// 6.Check if two arrays are equal (same elements, any order).
+
+// let Arr1 = [1, 2, 3, 4, 5];
+// let Arr2 = [5, 4, 2, 1, 3];
+// if (Arr1.sort().toString() === Arr2.sort().toString())
+//   console.log("both are same");
+// else console.log("both are not same");
+
+// 7.Move all zeros to the end of an array (e.g. [0,1,0,3,12] → [1,3,12,0,0]).
+
+// let arr = [0, 1, 0, 3, 12];
+// let nonZeroArr = arr.filter((num) => num !== 0);
+// let zeroArr = arr.filter((num) => num === 0);
+// console.log(nonZeroArr.concat(zeroArr));
+
+// 8.Find the longest increasing subarray.
+
+// let arr = [10, 22, 9, 33, 21, 50, 41, 60, 80];
+// let longestSubArr = [];
+// let tempArr = [arr[0]];
+// for (let i = 1; i < arr.length; i++) {
+//   if (arr[i] > arr[i - 1]) {
+//     tempArr.push(arr[i]);
+//   } else {
+//     if (tempArr.length > longestSubArr.length) {
+//       longestSubArr = tempArr;
+//     }
+//     tempArr = [arr[i]];
+//   }
+// }
+// if (tempArr.length > longestSubArr.length) {
+//   longestSubArr = tempArr;
+// }
+// console.log(longestSubArr);
+
+// 9. Find the pairs in an array whose sum is equal to a target.
+let arr = [1, 2, 3, 4, 5, 6, 7];
+let target = 10; // example target
+let seen = new Set();
+let found = false;
+
+for (let num of arr) {
+  let complement = target - num;
+  // check if complement already exists in set
+  if (seen.has(complement)) {
+    console.log(`Pair found: (${num}, ${complement})`);
+    found = true;
+  }
+  // add current number in set for future checking
+  seen.add(num);
+}
+
+if (!found) {
+  console.log("No pair found");
+}
