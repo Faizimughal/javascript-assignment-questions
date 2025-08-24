@@ -354,22 +354,103 @@
 // console.log(longestSubArr);
 
 // 9. Find the pairs in an array whose sum is equal to a target.
-let arr = [1, 2, 3, 4, 5, 6, 7];
-let target = 10; // example target
-let seen = new Set();
-let found = false;
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let target = 10; // example target
+// let seen = new Set();
+// let found = false;
 
-for (let num of arr) {
-  let complement = target - num;
-  // check if complement already exists in set
-  if (seen.has(complement)) {
-    console.log(`Pair found: (${num}, ${complement})`);
-    found = true;
+// for (let num of arr) {
+//   let complement = target - num;
+//   // check if complement already exists in set
+//   if (seen.has(complement)) {
+//     console.log(`Pair found: (${num}, ${complement})`);
+//     found = true;
+//   }
+//   // add current number in set for future checking
+//   seen.add(num);
+// }
+
+// if (!found) {
+//   console.log("No pair found");
+// }
+
+// ======================strings==========================
+
+// 1.Write a function to check if a string is a palindrome.
+
+// function isPalindrome(str) {
+//   let cleanStr = str.replace(/[^a-zA-Z0-9]/gi, "").toLowerCase();
+//   let reverseStr = cleanStr.split("").reverse().join("");
+//   if (cleanStr === reverseStr) document.writeln("Given string is a palindrome");
+//   else document.writeln("Given string is not a palindrome");
+// }
+// isPalindrome("Madam");
+
+// 2.Write a function to capitalize the first letter of each word in a sentence.
+
+// let str = "hello world! this is a test.";
+// let capitalizeStr = str
+//   .split(" ")
+//   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+//   .join(" ");
+// console.log(capitalizeStr);
+
+// 3.Write a function to find the longest word in a sentence.
+
+// let str = "The quick brown fox jumped over the lazy dog.";
+// let words = str.split(" ");
+// let longestWord = "";
+// words.forEach((word) => {
+//   if (word.length > longestWord.length) {
+//     longestWord = word;
+//   }
+// });
+// console.log(longestWord);
+
+// 4.Write a function to remove duplicate characters from a string.
+
+// let str = "programming, programming,programming";
+// let uniqueStr = str.split(",").map((word) => [...new Set(word)].join(""));
+// console.log(uniqueStr);
+
+// 5.Write a function to check if two strings are anagrams.
+
+// let str1 = "listen";
+// let str2 = "silent";
+// if (str1.split("").sort().join("") === str2.split("").sort().join(""))
+//   console.log(`${str1} and ${str2} both have same characters`);
+// else console.log("both have different characters");
+
+// 6.Write a function to reverse words in a sentence ("hello world" → "world hello").
+// let str = "hello world";
+// let reverseStr = str.split(" ").reverse().join(" ");
+// console.log(reverseStr);
+
+// 7.Write a function to count vowels and consonants in a string.
+
+let str = "my  name is faizan mehmood";
+let vowelStr = str.split(" ");
+let countVowel = 0;
+let countConsonant = 0;
+vowelStr.forEach((word) => {
+  for (let i = 0; i < word.length; i++) {
+    if (
+      word[i] === "a" ||
+      word[i] === "e" ||
+      word[i] === "i" ||
+      word[i] === "o" ||
+      word[i] === "u" ||
+      word[i] === "A" ||
+      word[i] === "E" ||
+      word[i] === "I" ||
+      word[i] === "O" ||
+      word[i] === "U"
+    ) {
+      countVowel++;
+    } else {
+      countConsonant++;
+    }
   }
-  // add current number in set for future checking
-  seen.add(num);
-}
-
-if (!found) {
-  console.log("No pair found");
-}
+});
+console.log(`Number of vowels:${countVowel}`);
+console.log(`Number of consonants:${countConsonant}`);

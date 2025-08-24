@@ -1,3 +1,8 @@
+===================================Array Methods=======================================
+
+
+
+
 let numbers = [3, 6, 8, 12, 15, 21, 28];
 👉 isme se sirf even numbers nikal kar ek naye array me save karo.
 
@@ -322,3 +327,241 @@ arr.for(let num of arr){
 if(!found){
   console.log(`pair is not found`);
 }
+
+=============================String Methods=============================
+
+
+
+🔤 Basic Info Methods
+
+.length → property, not a method, gives number of characters.
+
+.charAt(index) → character at given position.
+
+.charCodeAt(index) → UTF-16 code of character.
+
+.codePointAt(index) → Unicode code point of character.
+
+String.fromCharCode(num1, num2, …) → create string from UTF-16 codes.
+
+String.fromCodePoint(num1, num2, …) → create string from Unicode points.
+
+🔍 Searching & Checking
+
+.indexOf(substring, start?) → first occurrence index.
+
+.lastIndexOf(substring, start?) → last occurrence index.
+
+.includes(substring, start?) → true/false if found.
+
+.startsWith(substring, start?) → check beginning.
+
+.endsWith(substring, length?) → check ending.
+
+.match(regex) → array of matches.
+
+.matchAll(regex) → iterator of matches.
+
+.search(regex) → index of first regex match.
+
+✂️ Extracting Parts
+
+.slice(start, end?) → substring by index.
+
+.substring(start, end?) → similar to slice (no negatives).
+
+.substr(start, length?) → old, not recommended, but still works.
+
+🛠 Manipulating
+
+.replace(searchValue, newValue) → replace first match.
+
+.replaceAll(searchValue, newValue) → replace all matches.
+
+.concat(str1, str2, …) → join strings (but + is used more).
+
+.repeat(count) → repeat string.
+
+.padStart(targetLength, padString?) → add padding at start.
+
+.padEnd(targetLength, padString?) → add padding at end.
+
+.trim() → remove spaces from both ends.
+
+.trimStart() / .trimLeft() → remove leading spaces.
+
+.trimEnd() / .trimRight() → remove trailing spaces.
+
+.split(separator, limit?) → convert into array.
+
+🔄 Changing Case
+
+.toUpperCase() → all uppercase.
+
+.toLowerCase() → all lowercase.
+
+.toLocaleUpperCase() → locale-based uppercase.
+
+.toLocaleLowerCase() → locale-based lowercase.
+
+📦 Other Utilities
+
+.valueOf() → primitive string value.
+
+.toString() → convert to string (works on objects too).
+
+.normalize(form?) → Unicode normalization.
+
+.localeCompare(str) → compare strings according to locale.
+
+.at(index) → newer method, allows negative indexing.
+
+
+============================Questions of strings Regarding to Interview========================
+
+==========🔤 Basics & Fundamentals
+
+1.How do you find the length of a string in JavaScript?
+
+2.Difference between .slice(), .substring(), and .substr()?
+
+3.What’s the difference between == and === when comparing strings?
+
+4.How do you check if a string contains a substring?
+
+5.What’s the difference between .charAt() and using bracket notation (str[index])?
+
+6.What is .at() and how is it different from bracket notation?
+
+===========🔍 Searching & Matching
+
+1.How do you find the first/last index of a substring?
+
+2.How do you check if a string starts with or ends with a specific substring?
+
+3.How do .search() and .indexOf() differ?
+
+4.How do .match() and .matchAll() differ?
+
+5.How would you count the occurrences of a word in a string?
+ 
+=======✂️ Extraction & Manipulation
+
+1.Extract a part of a string using .slice() vs .substring().
+
+2.How do you replace all occurrences of a substring in ES6+?
+
+3.What’s the difference between .replace() and .replaceAll()?
+
+4.How do you split a string into words?
+
+5.How do you reverse a string in JavaScript?
+
+================🔄 Transformations
+
+1.Convert a string to uppercase / lowercase.
+
+2.Remove whitespace from both ends of a string.
+
+3.How do .trim(), .trimStart(), and .trimEnd() differ?
+
+4.How do .padStart() and .padEnd() work? Give an example.
+
+5.How would you mask a credit card number except last 4 digits?
+
+===========🧠 Tricky & Advanced
+
+1.Difference between primitive strings and String objects (new String("..."))?
+
+2.Explain .localeCompare() with an example.
+
+3.What is .normalize() used for in Unicode strings?
+
+4.What’s the difference between .toUpperCase() and .toLocaleUpperCase()?
+
+5.How would you handle emojis or characters outside the BMP (like "👩‍💻".length === ?)
+
+6.Why does "abc" == new String("abc") return true but "abc" === new String("abc") return false?
+
+=============⚡ Coding-Style Practice Questions
+
+1.Write a function to check if a string is a palindrome. ✔
+
+2.Write a function to capitalize the first letter of each word in a sentence.  ✔
+
+3.Write a function to find the longest word in a string. ✔
+
+4.Write a function to remove duplicate characters from a string. ✔
+
+5.Write a function to check if two strings are anagrams. ✔
+
+6.Write a function to reverse words in a sentence ("hello world" → "world hello"). ✔
+
+7.Write a function to count vowels and consonants in a string. ✔
+
+8.Write a function to compress a string ("aaabbc" → "a3b2c1").
+
+=============🧑‍💻 Practical Interview Questions on Strings
+
+1.Reverse a string
+Input: "hello" → Output: "olleh"  
+
+2.Check if a string is a palindrome   ✔
+Input: "madam" → Output: true
+
+3.Count vowels and consonants in a string
+Input: "JavaScript" → Output: Vowels: 3, Consonants: 7   ✔
+
+4.Find the first non-repeating character
+Input: "aabbcde" → Output: "c"
+
+5.Check if two strings are anagrams       ✔
+Input: "listen", "silent" → Output: true
+
+6.Capitalize the first letter of each word
+Input: "hello world from js" → Output: "Hello World From Js" ✔
+
+7.Find the longest word in a sentence
+Input: "The quick brown fox jumped" → Output: "jumped" ✔
+
+8.Remove all duplicate characters
+Input: "programming" → Output: "progamin"   ✔
+
+9.Check if a string contains only digits
+Input: "12345" → Output: true
+Input: "123a5" → Output: false
+
+9.Extract numbers from a string
+Input: "Order number: 12345" → Output: 12345
+
+==========⚡ Trickier / Advanced Practical Qs
+
+1.Count occurrences of each character
+Input: "apple" → Output: { a:1, p:2, l:1, e:1 }
+
+2.Find the most frequent character
+Input: "hello world" → Output: "l"
+
+3.Mask a credit card number
+Input: "1234567812345678" → Output: "************5678"
+
+4.Remove all whitespaces
+Input: " hello world " → Output: "helloworld"
+
+5.Check if a string contains only alphabets
+Input: "HelloWorld" → Output: true
+
+6.Compress a string (Run-length encoding)
+Input: "aaabbcddd" → Output: "a3b2c1d3"
+
+7.Reverse words in a sentence
+Input: "hello world" → Output: "world hello"     ✔
+
+8.Find all substrings of a string
+Input: "abc" → Output: ["a", "b", "c", "ab", "bc", "abc"]
+
+9.Convert snake_case to camelCase
+Input: "hello_world_js" → Output: "helloWorldJs"
+
+10.Check if a string ends with another string without using .endsWith()
+Input: "JavaScript", "Script" → Output: true
