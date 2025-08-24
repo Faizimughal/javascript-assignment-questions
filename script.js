@@ -428,29 +428,45 @@
 
 // 7.Write a function to count vowels and consonants in a string.
 
+// let str = "my  name is faizan mehmood";
+// let vowelStr = str.split(" ");
+// let countVowel = 0;
+// let countConsonant = 0;
+// vowelStr.forEach((word) => {
+//   for (let i = 0; i < word.length; i++) {
+//     if (
+//       word[i] === "a" ||
+//       word[i] === "e" ||
+//       word[i] === "i" ||
+//       word[i] === "o" ||
+//       word[i] === "u" ||
+//       word[i] === "A" ||
+//       word[i] === "E" ||
+//       word[i] === "I" ||
+//       word[i] === "O" ||
+//       word[i] === "U"
+//     ) {
+//       countVowel++;
+//     } else {
+//       countConsonant++;
+//     }
+//   }
+// });
+// console.log(`Number of vowels:${countVowel}`);
+// console.log(`Number of consonants:${countConsonant}`);
+
 let str = "my  name is faizan mehmood";
-let vowelStr = str.split(" ");
+
 let countVowel = 0;
 let countConsonant = 0;
-vowelStr.forEach((word) => {
-  for (let i = 0; i < word.length; i++) {
-    if (
-      word[i] === "a" ||
-      word[i] === "e" ||
-      word[i] === "i" ||
-      word[i] === "o" ||
-      word[i] === "u" ||
-      word[i] === "A" ||
-      word[i] === "E" ||
-      word[i] === "I" ||
-      word[i] === "O" ||
-      word[i] === "U"
-    ) {
-      countVowel++;
-    } else {
-      countConsonant++;
-    }
+
+for (let char of str) {
+  if (/[aeiou]/i.test(char)) {
+    countVowel++;
+  } else if (/[a-z]/i.test(char)) {
+    countConsonant++;
   }
-});
-console.log(`Number of vowels:${countVowel}`);
-console.log(`Number of consonants:${countConsonant}`);
+}
+
+console.log(`Number of vowels: ${countVowel}`);
+console.log(`Number of consonants: ${countConsonant}`);
