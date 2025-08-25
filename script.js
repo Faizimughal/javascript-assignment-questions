@@ -621,13 +621,13 @@
 // 9.Convert snake_case to camelCase
 // Input: "hello_world_js" → Output: "helloWorldJs"
 
-let str = "hello_world_js";
-let camelCaseStr = str
-  .split("_")
-  .map((word,index) =>
-    index === 0
-      ? word.toLowerCase()
-      : word.charAt(0).toUpperCase() + word.slice(1)
-  )
-  .join("");
-console.log(camelCaseStr);
+// let str = "hello_world_js";
+// let camelCaseStr = str
+//   .split("_")
+//   .map((word, index) =>
+//     index === 0
+//       ? word.toLowerCase()
+//       : word.charAt(0).toUpperCase() + word.slice(1)
+//   )
+//   .join("");
+// console.log(camelCaseStr);
