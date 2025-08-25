@@ -499,12 +499,12 @@ String.fromCodePoint(num1, num2, …) → create string from Unicode points.
 
 7.Write a function to count vowels and consonants in a string. ✔
 
-8.Write a function to compress a string ("aaabbc" → "a3b2c1").
+8.Write a function to compress a string ("aaabbc" → "a3b2c1").   ✔
 
 =============🧑‍💻 Practical Interview Questions on Strings
 
-1.Reverse a string
-Input: "hello" → Output: "olleh"  
+1.Reverse a string    
+Input: "hello" → Output: "olleh"                   ✔
 
 2.Check if a string is a palindrome   ✔
 Input: "madam" → Output: true
@@ -512,8 +512,8 @@ Input: "madam" → Output: true
 3.Count vowels and consonants in a string
 Input: "JavaScript" → Output: Vowels: 3, Consonants: 7   ✔
 
-4.Find the first non-repeating character
-Input: "aabbcde" → Output: "c"
+4.Find the first non-repeating character   
+Input: "aabbcde" → Output: "c"                    ✔
 
 5.Check if two strings are anagrams       ✔
 Input: "listen", "silent" → Output: true
@@ -529,39 +529,39 @@ Input: "programming" → Output: "progamin"   ✔
 
 9.Check if a string contains only digits
 Input: "12345" → Output: true
-Input: "123a5" → Output: false
+Input: "123a5" → Output: false         ✔
 
 9.Extract numbers from a string
-Input: "Order number: 12345" → Output: 12345
+Input: "Order number: 12345" → Output: 12345    ✔
 
 ==========⚡ Trickier / Advanced Practical Qs
 
 1.Count occurrences of each character
-Input: "apple" → Output: { a:1, p:2, l:1, e:1 }
+Input: "apple" → Output: { a:1, p:2, l:1, e:1 }   ✔
 
 2.Find the most frequent character
-Input: "hello world" → Output: "l"
+Input: "hello world" → Output: "l"           ✔
 
 3.Mask a credit card number
-Input: "1234567812345678" → Output: "************5678"
+Input: "1234567812345678" → Output: "************5678"    ✔
 
 4.Remove all whitespaces
-Input: " hello world " → Output: "helloworld"
+Input: " hello world " → Output: "helloworld"           ✔
 
 5.Check if a string contains only alphabets
-Input: "HelloWorld" → Output: true
+Input: "HelloWorld" → Output: true              ✔
 
-6.Compress a string (Run-length encoding)
-Input: "aaabbcddd" → Output: "a3b2c1d3"
+6.Compress a string (Run-length encoding)   ✔
+Input: "aaabbcddd" → Output: "a3b2c1d3"     
 
 7.Reverse words in a sentence
 Input: "hello world" → Output: "world hello"     ✔
 
 8.Find all substrings of a string
-Input: "abc" → Output: ["a", "b", "c", "ab", "bc", "abc"]
+Input: "abc" → Output: ["a", "b", "c", "ab", "bc", "abc"]      ✔
 
 9.Convert snake_case to camelCase
 Input: "hello_world_js" → Output: "helloWorldJs"
 
 10.Check if a string ends with another string without using .endsWith()
-Input: "JavaScript", "Script" → Output: true
+Input: "JavaScript", "Script" → Output: true      ✔

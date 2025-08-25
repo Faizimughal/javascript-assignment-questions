@@ -455,18 +455,179 @@
 // console.log(`Number of vowels:${countVowel}`);
 // console.log(`Number of consonants:${countConsonant}`);
 
-let str = "my  name is faizan mehmood";
+//method2
 
-let countVowel = 0;
-let countConsonant = 0;
+// let str = "my  name is faizan mehmood";
 
-for (let char of str) {
-  if (/[aeiou]/i.test(char)) {
-    countVowel++;
-  } else if (/[a-z]/i.test(char)) {
-    countConsonant++;
-  }
-}
+// let countVowel = 0;
+// let countConsonant = 0;
 
-console.log(`Number of vowels: ${countVowel}`);
-console.log(`Number of consonants: ${countConsonant}`);
+// for (let char of str) {
+//   if (/[aeiou]/i.test(char)) {
+//     countVowel++;
+//   } else if (/[a-z]/i.test(char)) {
+//     countConsonant++;
+//   }
+// }
+
+// console.log(`Number of vowels: ${countVowel}`);
+// console.log(`Number of consonants: ${countConsonant}`);
+
+// 8.Write a function to compress a string ("aaabbc" → "a3b2c1").
+
+// let str = "my name is faizan mehmood";
+// let charCount = {};
+// for (let char of str) {
+//   if (char !== " ") {
+//     if (charCount[char]) {
+//       charCount[char]++;
+//     } else {
+//       charCount[char] = 1;
+//     }
+//   }
+// }
+// console.log(charCount);
+
+// 1.Reverse a string
+// Input: "hello" → Output: "olleh"
+
+// let str = "hello";
+// let reverseStr = str.split("").reverse().join("");
+// console.log(reverseStr);
+
+// 4.Find the first non-repeating character
+// Input: "aabbcde" → Output: "c"
+
+// let str = "aabbcde";
+// let charCount = {};
+// for (let char of str) {
+//   if (char !== " ") {
+//     if (charCount[char]) {
+//       charCount[char]++;
+//     } else {
+//       charCount[char] = 1;
+//     }
+//   }
+// }
+// for (let char in charCount) {
+//   if (charCount[char] === 1) {
+//     console.log(char);
+//     break;
+//   }
+// }
+
+// 9.Check if a string contains only digits
+// Input: "12345" → Output: true
+// Input: "123a5" → Output: false
+
+// let str = "123ababa45";
+// let isOnlyDigits = /^\d+$/.test(str);
+// console.log(isOnlyDigits);
+
+// 9.Extract numbers from a string
+// Input: "Order number: 12345" → Output: 12345
+
+// let str = "Order number: 12345";
+// let numbers = str.match(/\d+/g).map(Number);
+// console.log(numbers);
+
+// 2.Find the most frequent character
+// Input: "hello world" → Output: "l"
+
+// let str = "hello world";
+// let charCount = {};
+// for (let char of str) {
+//   if (char !== " ") {
+//     if (charCount[char]) {
+//       charCount[char]++;
+//     } else {
+//       charCount[char] = 1;
+//     }
+//   }
+// }
+// let maxCount = 0;
+// let mostFrequentChar;
+// for (let char in charCount) {
+//   if (charCount[char] > maxCount) {
+//     maxCount = charCount[char];
+//     mostFrequentChar = char;
+//   }
+// }
+// console.log(mostFrequentChar);
+
+// 4.Remove all whitespaces
+// Input: " hello world " → Output: "helloworld"
+
+// let str = "hello world  my name    is faizan";
+// let trimStr = str.split(" ").join("");
+// console.log(trimStr);
+
+// 5.Check if a string contains only alphabets
+// Input: "HelloWorld" → Output: true
+
+// let str = "hello world";
+// let isAlphabets = /^[A-Za-z ]+$/.test(str);
+// console.log(isAlphabets);
+
+// 6.Compress a string (Run-length encoding)
+// Input: "aaabbcddd" → Output: "a3b2c1d3"
+
+// let str = "aaabbcddd";
+// let charCount = {};
+// let compressedStr = "";
+// for (let char of str) {
+//   if (char !== " ") {
+//     if (charCount[char]) {
+//       charCount[char]++;
+//     } else {
+//       charCount[char] = 1;
+//     }
+//   }
+// }
+// for (let char in charCount) {
+//   compressedStr += char + charCount[char];
+// }
+// console.log(compressedStr);
+
+// 3.Mask a credit card number
+// Input: "1234567812345678" → Output: "************5678"
+
+// let str = "1234567812345678";
+// let maskedStr = str.slice(-4).padStart(str.length, "*");
+// console.log(maskedStr);
+
+// 8.Find all substrings of a string
+// Input: "abc" → Output: ["a", "b", "c", "ab", "bc", "abc"]
+
+// let str = "abc";
+// let substrings = [];
+// for (let i = 0; i < str.length; i++) {
+//   for (let j = i + 1; j <= str.length; j++) {
+//     substrings.push(str.slice(i, j));
+//   }
+// }
+// console.log(substrings);
+
+// 10.Check if a string ends with another string without using .endsWith()
+// Input: "JavaScript", "Script" → Output: true
+
+// function isEndsWith(str, target) {
+//   return str.slice(-target.length) === target;
+// }
+
+// console.log(isEndsWith("JavaScript", "Script"));
+// console.log(isEndsWith("JavaScript", "Java"));
+
+// 9.Convert snake_case to camelCase
+// Input: "hello_world_js" → Output: "helloWorldJs"
+
+let str = "hello_world_js";
+let camelCaseStr = str
+  .split("_")
+  .map((word,index) =>
+    index === 0
+      ? word.toLowerCase()
+      : word.charAt(0).toUpperCase() + word.slice(1)
+  )
+  .join("");
+console.log(camelCaseStr);
