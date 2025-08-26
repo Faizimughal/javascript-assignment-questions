@@ -561,7 +561,55 @@ Input: "hello world" → Output: "world hello"     ✔
 Input: "abc" → Output: ["a", "b", "c", "ab", "bc", "abc"]      ✔
 
 9.Convert snake_case to camelCase
-Input: "hello_world_js" → Output: "helloWorldJs"
+Input: "hello_world_js" → Output: "helloWorldJs" ✔
 
 10.Check if a string ends with another string without using .endsWith()
 Input: "JavaScript", "Script" → Output: true      ✔
+
+================================Object Methods========================
+---
+
+## 📌 Property Access
+
+* **`Object.keys(obj)`** → saare keys array me.
+* **`Object.values(obj)`** → saare values array me.
+* **`Object.entries(obj)`** → key-value pairs array me.
+* **`Object.fromEntries(arr)`** → array of key-value pairs → object.
+
+---
+
+## 📌 Copying & Cloning
+
+* **`Object.assign(target, source)`** → objects ko merge/copy karna.
+* **Spread Operator `{...obj}`** → modern shorthand (interviews me poocha jata hai).
+
+---
+
+## 📌 Object Control
+
+* **`Object.freeze(obj)`** → object fully immutable (no add/update/delete).
+* **`Object.seal(obj)`** → add/delete nahi, bas update allowed.
+
+---
+
+## 📌 Property Descriptors
+
+* **`Object.getOwnPropertyDescriptor(obj, key)`** → ek property ke attributes check karna.
+* **`Object.defineProperty(obj, key, descriptor)`** → property ko custom attributes ke sath define karna.
+
+---
+
+## 📌 Prototype & Inheritance
+
+* **`Object.create(proto)`** → naya object with given prototype.
+* **`Object.getPrototypeOf(obj)`** → object ka prototype lena.
+* **`Object.setPrototypeOf(obj, proto)`** → prototype change karna.
+
+---
+
+## 📌 Checking
+
+* **`Object.hasOwn(obj, key)`** → check karo property directly object me hai ya nahi.
+* **`obj.hasOwnProperty(key)`** → purana lekin abhi bhi important method.
+* **`Object.is(val1, val2)`** → strict comparison (`NaN`, `+0/-0` cases handle karta hai).
+
