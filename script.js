@@ -631,3 +631,276 @@
 //   )
 //   .join("");
 // console.log(camelCaseStr);
+
+// =========================Object methods===========================
+
+// 1. Ek object banao jisme `name`, `age`, aur `city` ho. Uske keys aur values print karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   city: "faisalabad",
+//   country: "Pakistan",
+//   cell_no: "0317-7687726",
+// };
+// console.log(person);
+
+// 2. Ek object ka size (number of properties) find karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   city: "faisalabad",
+//   country: "Pakistan",
+//   cell_no: "0317-7687726",
+// };
+// console.log(Object.keys(person).length);
+
+// 3. Kaise check karoge ki ek property object me exist karti hai ya nahi?
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   city: "faisalabad",
+//   country: "Pakistan",
+//   cell_no: "0317-7687726",
+// };
+// console.log(Object.hasOwn(person, "name"));
+
+// 4. Difference explain karo shallow copy aur deep copy me. Code likh kar dikhana.
+
+// Shallow Copy: Ek shallow copy me, agar original object ke andar koi nested object hai, to wo nested object reference ke through copy hota hai. Iska matlab hai ki agar nested object me koi change karoge to wo original object me bhi reflect hoga.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+
+// let shallowCopy = Object.assign({}, person);
+// shallowCopy.address.city = "lahore";
+
+// console.log(person.address.city);
+
+// Deep Copy
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+
+// let deepCopy = JSON.parse(JSON.stringify(person));
+
+// deepCopy.address.city = "lahore";
+// console.log(person.address.city);
+
+// 5. `Object.assign` aur spread operator `{...obj}` use karke object copy karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: { city: "faisalabad", country: "Pakistan" },
+// };
+
+// let newObj = Object.assign({}, person);
+// newObj.address.city = "lahore";
+// console.log(person.address.city);
+
+// let newObj2 = { ...person };
+// newObj2.address.city = "lahore";
+// console.log(person.address.city);
+
+// 6. Ek nested object ko deep clone karne ka tareeqa likho (without library).
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     zip: 38000,
+//     country: "Pakistan",
+//   },
+// };
+
+// let deepClone = JSON.parse(JSON.stringify(person));
+// deepClone.address.city = "lahore";
+// console.log(person.address.city);
+
+// 7. Ek object ko `freeze` karo aur usme property add/update/delete karke dikhao.
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+// Object.freeze(person);
+// person.name = "ahmed"; // update
+// delete person.address.city; // delete
+// person.country = "India"; // add
+// console.log(person);
+
+// 8. Ek object ko `seal` karo aur usme property add/update/delete karke dikhao.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+// Object.seal(person);
+// person.name = "ahmed"; // update
+// delete person.address.city; // delete
+// person.country = "India"; // add
+// console.log(person);
+
+// 9. Interviewer puchta hai: `freeze` aur `seal` me exact difference kya hai? Example se samjhao.
+
+// 10. Ek property ko read-only banane ke liye `Object.defineProperty` ka use karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+
+// console.log(
+//   Object.defineProperty(person, "name", { enumerable: false, writable: false })
+// );
+// console.log(Object.getOwnPropertyDescriptor(person, "name"));
+
+// 11. `Object.getOwnPropertyDescriptor` ka use karke ek property ka descriptor print karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+// console.log(Object.getOwnPropertyDescriptor(person, "name"));
+
+// 12. Ek property ko non-enumerable banao aur dikhao ki loop me wo nahi aa raha.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: {
+//     city: "faisalabad",
+//     country: "Pakistan",
+//   },
+// };
+// Object.defineProperty(person, "name", { enumerable: false });
+
+// 13. Ek object ko dusre object ka prototype banao using `Object.create`.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   address: { city: "faisalabad", zip: 38000, country: "pakistan" },
+// };
+
+// let newObj = Object.create(person);
+// newObj.cell_no = "03177687726";
+// console.log(newObj.address);
+
+// 14. `getPrototypeOf` aur `setPrototypeOf` ka use karke prototype chain ko modify karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   city: "faisalabad",
+// };
+// let skills = {
+//   language: ["javaScript", "TypeScript"],
+//   tech: ["MERN", "MEAN"],
+// };
+// Object.setPrototypeOf(person, skills);
+// console.log(person.language);
+
+// console.log(Object.getPrototypeOf(person));
+
+// 16. Ek object banao aur `hasOwn` aur `hasOwnProperty` se property check karo.
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   city: "faisalabad",
+// };
+// console.log(Object.hasOwn(person, "name"));
+// console.log(person.hasOwnProperty("name"));
+
+// 18. Ek function likho jo check kare ki diya gaya input object hai ya nahi.
+
+// function isObject(value) {
+//   return value !== null && typeof value === "object" && !Array.isArray(value);
+// }
+
+// console.log(isObject({ name: "Faizan" })); // true
+// console.log(isObject([1, 2, 3])); // false
+// console.log(isObject(null)); // false
+// console.log(isObject("hello")); // false
+
+// 19. Ek function likho jo object ke andar sabse bada number return kare.
+
+// let numbers = { a: 928, b: 67, c: 17, d: 98, e: 9 };
+// console.log(Math.max(...Object.values(numbers)));
+
+// 20. Ek object ko key-value pair array me convert karo aur wapas object me banao (using `entries` + `fromEntries`).
+
+// let person = {
+//   name: "faizan",
+//   age: 24,
+//   city: "faisalabad",
+// };
+// let arr = Object.entries(person);
+// console.log(arr.flat(2));
+
+// console.log(Object.fromEntries(arr));
+
+// 21. Ek function likho jo object ke andar nested properties ko safely access kare (like optional chaining).
+
+// let person = {
+//   firstname: "faizan",
+//   lastname: "mehmood",
+//   age: 23,
+//   city: "faisalabad",
+//   country: "pakistan",
+//   address: {
+//     street: "abc road",
+//     zip: 38000,
+//   },
+// };
+
+// // Normal access
+// console.log(person.firstname); // "faizan"
+
+// // Nested safe access
+// console.log(person.address?.street); // "abc road"
+// console.log(person.address?.city); // undefined (no error)
+// console.log(person.contact?.phone); // undefined (safe)
+
+// 22. Interviewer favourite: "Kaise check karoge ki ek object empty hai ya nahi?"
+
+// 📌 1. Object.keys() / Object.entries() use karke
+// let obj = {};
+// console.log(Object.keys(obj).length === 0); // true
+// console.log(Object.entries(obj).length === 0); // true
+
+// 📌 3. JSON.stringify() trick
+// let obj = {};
+// console.log(JSON.stringify(obj) === "{}"); // true

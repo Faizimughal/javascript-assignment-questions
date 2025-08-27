@@ -613,3 +613,89 @@ Input: "JavaScript", "Script" → Output: true      ✔
 * **`obj.hasOwnProperty(key)`** → purana lekin abhi bhi important method.
 * **`Object.is(val1, val2)`** → strict comparison (`NaN`, `+0/-0` cases handle karta hai).
 
+
+* Object.keys()
+* Object.values()
+* Object.entries()
+* Object.fromEntries()
+* Object.assign()
+* Object.freeze()
+* Object.seal()
+* Object.getOwnPropertyDescriptor()
+* Object.defineProperty()
+* Object.create()
+* Object.getPrototypeOf()
+* Object.setPrototypeOf()
+* Object.hasOwn()
+* Object.hasOwnProperty()
+* Object.is()
+
+## 📌 Object Basics
+
+1. Ek object banao jisme `name`, `age`, aur `city` ho. Uske keys aur values print karo.   ✔
+2. Ek object ka size (number of properties) find karo.   ✔
+3. Kaise check karoge ki ek property object me exist karti hai ya nahi?   ✔
+
+---
+
+## 📌 Copying & Cloning
+
+4. Difference explain karo shallow copy aur deep copy me. Code likh kar dikhana.  ✔
+5. `Object.assign` aur spread operator `{...obj}` use karke object copy karo.     ✔
+6. Ek nested object ko deep clone karne ka tareeqa likho (without library).       ✔
+
+---
+
+## 📌 Object Control
+
+7. Ek object ko `freeze` karo aur usme property add/update/delete karke dikhao.  ✔
+8. Ek object ko `seal` karo aur usme property add/update/delete karke dikhao. ✔
+9. Interviewer puchta hai: `freeze` aur `seal` me exact difference kya hai? Example se samjhao. ✔
+
+---
+
+## 📌 Property Descriptors
+
+10. Ek property ko read-only banane ke liye `Object.defineProperty` ka use karo. ✔
+11. `Object.getOwnPropertyDescriptor` ka use karke ek property ka descriptor print karo. ✔
+12. Ek property ko non-enumerable banao aur dikhao ki loop me wo nahi aa raha. ✔
+
+---
+
+## 📌 Prototype & Inheritance
+
+13. Ek object ko dusre object ka prototype banao using `Object.create`.   ✔
+14. `getPrototypeOf` aur `setPrototypeOf` ka use karke prototype chain ko modify karo. ✔
+15. Interview me sawal: "Prototype chain kya hota hai aur kaise work karti hai?" Example do.  ✔
+
+---
+
+## 📌 Checking
+
+16. Ek object banao aur `hasOwn` aur `hasOwnProperty` se property check karo.  ✔
+17. `Object.is` aur `===` me difference example ke sath samjhao (`NaN`, `+0`, `-0`).
+18. Ek function likho jo check kare ki diya gaya input object hai ya nahi. ✔
+
+---
+
+## 📌 Applied / Logical
+
+19. Ek function likho jo object ke andar sabse bada number return kare.  ✔
+20. Ek object ko key-value pair array me convert karo aur wapas object me banao (using `entries` + `fromEntries`). ✔
+21. Ek function likho jo object ke andar nested properties ko safely access kare (like optional chaining).  ✔
+22. Interviewer favourite: "Kaise check karoge ki ek object empty hai ya nahi?"
+
+
+📌 typeof vs Array.isArray vs instanceof
+
+| Value / Test              | `typeof` result | `Array.isArray()` | `instanceof` check                        |
+| ------------------------- | --------------- | ----------------- | ----------------------------------------- |
+| `"hello"` (string)        | `"string"`      | `false`           | `"hello" instanceof String → false`       |
+| `42` (number)             | `"number"`      | `false`           | `42 instanceof Number → false`            |
+| `true` (boolean)          | `"boolean"`     | `false`           | `true instanceof Boolean → false`         |
+| `undefined`               | `"undefined"`   | `false`           | `undefined instanceof Object → false`     |
+| `null`                    | `"object"` ❌   |  `false`          | `null instanceof Object → false`          |
+| `[1, 2, 3]` (array)       | `"object"` ❌   | `true` ✅        | `[1,2,3] instanceof Array → true`         |
+| `{ a: 1 }` (object)       | `"object"`      | `false`           | `{a:1} instanceof Object → true`          |
+| `function(){}` (function) | `"function"`    | `false`           | `function(){} instanceof Function → true` |
+| `new Date()`              | `"object"`      | `false`           | `new Date() instanceof Date → true`       |
